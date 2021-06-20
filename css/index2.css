@@ -1,0 +1,335 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: src="images/壁纸.jp";
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.header {
+    top: 100px;
+    position: relative;
+    height: 100px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: rgba(2, 8, 37, 0.3);
+    align-content: flex-start;
+    /*使得span之间的空格消失*/
+    display: flex;
+}
+
+.header span {
+    color: aliceblue;
+    display: inline-flex;
+    /*弹性布局*/
+    align-items: center;
+    /*居中*/
+    justify-content: center;
+    /*垂直居中*/
+    margin: 0 auto;
+    position: relative;
+    width: 20%;
+    height: inherit;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.header span:hover {
+    color: red;
+    background-color: rgba(28, 238, 238, 0.163);
+}
+
+.content {
+    top: 100px;
+    position: relative;
+    height: 350px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: rgba(2, 8, 37, 0.3);
+}
+
+.content1,
+.content2,
+.content3,
+.content4,
+.content5 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /*设置为绝对定位，根据父元素的，所有的content放在同一个区域*/
+    align-content: flex-start;
+    /*使得span之间的空格消失*/
+    display: flex;
+}
+
+.content1 div {
+    /*将content1水平分为3个*/
+    display: flex;
+    /*弹性布局*/
+    align-items: center;
+    /*居中*/
+    justify-content: center;
+    /*垂直居中*/
+    flex-direction: column;
+    margin: 0 auto;
+    width: 33%;
+    height: inherit;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.content1 div {
+    width: 100%;
+    font-size: medium;
+}
+
+.content1 div div {
+    display: flex;
+    flex-direction: row;
+    /*设置水平排列*/
+}
+
+.content1 div div img {
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+}
+
+.shenghuozhao {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    opacity: 0.5;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.content2 {
+    display: flex;
+    flex-direction: column;
+    /*设置容器内的flex垂直排列*/
+}
+
+.content2 .content2-items {
+    width: 100%;
+    height: 50%;
+    margin: 0 auto auto 0;
+    left: 15px;
+    position: relative;
+}
+
+.content2 .content2-items span {
+    font-size: large;
+    color: rgb(207, 206, 206);
+    font-weight: bold;
+}
+
+.content2 .content2-items .content2-items-work-content {
+    font-size: small;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 20px;
+}
+
+.content .content3 {
+    flex-direction: column;
+    display: flex;
+}
+
+.content3 .skill-items {
+    height: 15%;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 5px;
+    font-size: medium;
+    color: rgba(241, 241, 241, 0.53);
+
+}
+
+.skill-items div {
+    background-color: rgba(219, 255, 255, 0.163);
+    width: 80%;
+    position: absolute;
+    left: 15%;
+    display: inline-block;
+}
+
+.qianduan div span {
+    background-color: rgb(7, 110, 110);
+    width: 40%;
+    transition: width 1s;
+    position: absolute;
+    animation: donghua-qianduan;
+    animation-duration: 3s;
+}
+
+@keyframes donghua-qianduan {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 40%;
+    }
+}
+
+.qianduan .color::after {
+    content: "40%";
+    float: right;
+}
+
+.cplusplus div span {
+    background-color: rgb(236, 185, 90);
+    width: 60%;
+    position: absolute;
+    animation: donghua-cplusplus;
+    animation-duration: 3s;
+}
+
+@keyframes donghua-cplusplus {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 60%;
+    }
+}
+
+.cplusplus .color::after {
+    content: "60%";
+    float: right;
+}
+
+.python div span {
+    background-color: rgb(3, 78, 125);
+    width: 70%;
+    position: absolute;
+    animation: donghua-python;
+    animation-duration: 3s;
+}
+
+@keyframes donghua-python {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 70%;
+    }
+}
+
+.python .color::after {
+    content: "70%";
+    float: right;
+}
+
+.JAVA div span {
+    background-color: rgb(224, 221, 120);
+    width: 66%;
+    position: absolute;
+    animation: donghua-JAVA;
+    animation-duration: 3s;
+}
+
+@keyframes donghua-JAVA {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 66%;
+    }
+}
+
+.JAVA .color::after {
+    content: "66%";
+    float: right;
+}
+
+.AI div span {
+    background-color: rgba(193, 17, 17, 0.53);
+    width: 45%;
+    position: absolute;
+    animation: donghua-AI;
+    animation-duration: 3s;
+}
+
+@keyframes donghua-AI {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 45%;
+    }
+}
+
+.AI .color::after {
+    content: "45%";
+    float: right;
+}
+
+.content4 {
+    flex-direction: column;
+}
+
+.content4 .major {
+    height: 50%;
+    width: 100%;
+}
+
+.content4 span {
+    font-size: 35px;
+    font-weight: 600;
+    color: rgba(240, 248, 255, 0.319);
+    margin-left: 10%;
+}
+
+.content4 p {
+    margin-left: 8%;
+    margin-top: 10px;
+    color: rgba(189, 193, 196, 0.693);
+}
+
+.content p:hover {
+    color: red;
+}
+
+.content5 {
+    flex-direction: column;
+}
+
+.content5 span {
+    font-size: 35px;
+    font-weight: 600;
+    color: rgba(240, 248, 255, 0.319);
+    margin-left: 10%;
+}
+
+.content5 p {
+    margin-left: 8%;
+    margin-top: 10px;
+    color: rgba(0, 8, 14, 0.693);
+}
+
+
+
+.content .content2 {
+    display: none;
+}
+
+.content .content3 {
+    display: none;
+}
+
+.content .content4 {
+    display: none;
+}
+
+.content .content5 {
+    display: none;
+}
